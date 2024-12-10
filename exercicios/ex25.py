@@ -14,25 +14,26 @@ refazer = todo ['fazer café', 'caminhar']
 def add_item(item, list):
     list.append(item)
     print(f'"{item}" adicionada com sucesso à lista!\n')
-    
-    
+
+
 def undo(main, backup):
     last_task = main.pop()
     backup.append(last_task)
     print(f'\n"{last_task}" removida com sucesso da lista!\n')
-    
-    
+
+
 def redo(main, backup):
     recovered_task = backup.pop()
     main.append(recovered_task)
     print(f'\n"{recovered_task}" adicionada de volta à lista!\n')
-    
-    
+
+
 def receive_integer_input(*args):
     # print(args)
     while True:
         try:
-            integer = int(input('Informe o número da tarefa que deseja remover: '))
+            integer = int(
+                input('Informe o número da tarefa que deseja remover: '))
             if not check_index(args, integer-1):
                 print('Não existe tarefa para o número informado.\n')
                 continue
@@ -44,25 +45,25 @@ def receive_integer_input(*args):
 
 def check_index(list, index):
     return 0 <= index < len(list)
-    
-    
+
+
 def delete_task(list, index):
     deleted_task = list.pop(index)
     print(f'"{deleted_task}" foi deletada permanentemente!\n')
-    
-    
+
+
 def show_list(list):
     for item in list:
         print(f'\t{item}')
     print()
-    
-    
+
+
 def save_and_quit(list):
     with open(path, '+w', encoding='utf-8') as file:
         for item in list:
             file.write(f'{item}\n')
     print('A lista foi salva com sucesso!')
-    
+
 
 directory = '.\\exercicios\\arquivos\\'
 path = directory+'todo_list.txt'
@@ -117,3 +118,5 @@ while True:
                 show_list(todo_list)
             else:
                 print('A lista de tarefas está vazia.\n')
+        case _:
+            print('Por favor, informe uma opção válida.')
