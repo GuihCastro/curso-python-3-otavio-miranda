@@ -1,0 +1,22 @@
+{
+  "name": "Guilherme",
+  "surname": "Henrique de Castro",
+  "addresses": [
+    {
+      "address 1": "rua tal",
+      "number": 6
+    },
+    {
+      "address 2": "rua tal e tal",
+      "number": 666
+    }
+  ],
+  "height": 1.69,
+  "favorite_numbers": [
+    6,
+    6,
+    6
+  ],
+  "is_dev": true,
+  "none": null
+}
