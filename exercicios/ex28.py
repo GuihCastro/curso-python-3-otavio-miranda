@@ -36,7 +36,7 @@ class Fabricante:
         
     def listar_carros(self):
         print(f'Carros da {self.nome}:')
-        for carro in self.carros: print(f'{carro.modelo}')
+        for carro in self.carros: print(f'{carro.marca} {carro.modelo} {carro.motor.nome}')
     
 
 class Carro:
