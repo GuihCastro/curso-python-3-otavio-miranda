@@ -1,0 +1,6 @@
+SUCESSO: Samsung Galaxy S foi ligado! (Smartphone)
+SUCESSO: Samsung Galaxy S foi desligado! (Smartphone)
+ERRO: Tentou desligar Apple iPhone enquanto já estava desligado... (Smartphone)
+SUCESSO: Apple iPhone foi ligado! (Smartphone)
+ERRO: Tentou ligar Apple iPhone enquanto já estava ligado... (Smartphone)
+SUCESSO: Apple iPhone foi desligado! (Smartphone)
