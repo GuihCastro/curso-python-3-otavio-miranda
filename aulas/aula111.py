@@ -17,10 +17,11 @@ use @abstractmethod como decorator mais interno.
 
 from abc import ABC, abstractmethod
 
+
 class Log(ABC):
     @abstractmethod
-    def _log(self, msg):...
-    
+    def _log(self, msg): ...
+
     def log_error(self, msg):
         return self._log(f'ERRO: {msg}')
 
@@ -31,7 +32,7 @@ class Log(ABC):
 class LogPrintMixin(Log):
     def _log(self, msg):
         print(f'{msg} ({self.__class__.__name__})')
-        
-        
+
+
 log = LogPrintMixin()
 log.log_error('Vish...')
